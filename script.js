@@ -5,13 +5,11 @@ let divide = document.getElementById('divide');
 let  multiply= document.getElementById('multiply');
 let minus = document.getElementById('minus');
 let  plus = document.getElementById('plus');
-let  equals = document.getElementById('=');
+let  equals = document.getElementById('equals');
 let textDisplay = document.getElementById('textDisplay');
 let stringg;
 let additional 
-//console.log(numbs[0])
 
-//textDisplay.innerHTML = 2443;
 
 for(let i=0; i<9; i++){
     let numKeys = document.createElement('input');
@@ -29,7 +27,26 @@ for(let i=0; i<9; i++){
     })
 }
 
+Clear.addEventListener('click',()=>{
+    textDisplay.innerHTML = ""
+})
 
+divide.addEventListener('click',()=>{
+    textDisplay.innerHTML += divide.value
+})
+multiply.addEventListener('click',()=>{
+    textDisplay.innerHTML += multiply.value
+})
+minus.addEventListener('click',()=>{
+    textDisplay.innerHTML += minus.value
+})
+plus.addEventListener('click',()=>{
+    textDisplay.innerHTML += plus.value
+})
+
+equals.addEventListener('click',()=>{
+    textDisplay.innerHTML = `${eval(textDisplay.innerHTML)}`
+})
 /*
 console.log(text.value)
 one.addEventListener('click',()=>{
